@@ -1,0 +1,18 @@
+name: Midnight Reset
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Midnight UTC daily
+  workflow_dispatch:
+
+jobs:
+  reset:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel reset-status
+        run: |
+          curl -sS -X POST "$VERCEL_URL/api/reset-status" -H "Authorization: Bearer $ADMIN_TOKEN"
+        env:
+          VERCEL_URL: ${{ secrets.VERCEL_URL }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+

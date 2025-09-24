@@ -1,0 +1,18 @@
+name: Daily Message
+
+on:
+  schedule:
+    - cron: '0 9 * * 1-5' # 9:00 AM UTC Mon-Fri (adjust via TZ)
+  workflow_dispatch:
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Vercel send-message
+        run: |
+          curl -sS -X POST "$VERCEL_URL/api/send-message" -H "Authorization: Bearer $ADMIN_TOKEN"
+        env:
+          VERCEL_URL: ${{ secrets.VERCEL_URL }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+

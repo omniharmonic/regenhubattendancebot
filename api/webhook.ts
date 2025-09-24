@@ -16,6 +16,68 @@ function mapEmojiToStatus(emoji: string): string {
   return 'unknown';
 }
 
+// Notion API functions
+async function queryNotionDatabase(databaseId: string, telegramUsername: string) {
+  const notionToken = process.env['NOTION_TOKEN'];
+  if (!notionToken) {
+    throw new Error('NOTION_TOKEN not configured');
+  }
+
+  const response = await fetch(`https://api.notion.com/v1/databases/${databaseId}/query`, {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${notionToken}`,
+      'Content-Type': 'application/json',
+      'Notion-Version': '2022-06-28'
+    },
+    body: JSON.stringify({
+      filter: {
+        property: 'Telegram Username',
+        rich_text: {
+          equals: telegramUsername
+        }
+      }
+    })
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Notion query failed: ${response.status} - ${errorText}`);
+  }
+
+  return await response.json();
+}
+
+async function updateNotionPage(pageId: string, status: string, date: string) {
+  const notionToken = process.env['NOTION_TOKEN'];
+  if (!notionToken) {
+    throw new Error('NOTION_TOKEN not configured');
+  }
+
+  const response = await fetch(`https://api.notion.com/v1/pages/${pageId}`, {
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${notionToken}`,
+      'Content-Type': 'application/json',
+      'Notion-Version': '2022-06-28'
+    },
+    body: JSON.stringify({
+      properties: {
+        [date]: {
+          checkbox: status === 'present'
+        }
+      }
+    })
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Notion update failed: ${response.status} - ${errorText}`);
+  }
+
+  return await response.json();
+}
+
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     console.log('Webhook received:', {
@@ -42,17 +104,55 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         messageId: message_id
       });
 
-      // TODO: Add Notion username verification here
-      // For now, just log the reaction
-      console.log('Reaction processed successfully', {
-        userId: user.id,
-        username: user.username,
-        status,
-        date,
-        reactionTime
-      });
+      // Check if we have a Telegram username
+      if (!user.username) {
+        console.log('No Telegram username provided, skipping Notion update');
+        return res.status(200).json({ ok: true, skipped: true, reason: 'no_username' });
+      }
 
-      return res.status(200).json({ ok: true, processed: true });
+      try {
+        // Query Notion database for user
+        const databaseId = process.env['NOTION_DATABASE_ID'];
+        if (!databaseId) {
+          throw new Error('NOTION_DATABASE_ID not configured');
+        }
+
+        console.log('Querying Notion for user:', user.username);
+        const notionResults = await queryNotionDatabase(databaseId, user.username);
+        
+        if (notionResults.results.length === 0) {
+          console.log('No Notion record found for username:', user.username);
+          return res.status(200).json({ ok: true, skipped: true, reason: 'user_not_found' });
+        }
+
+        const notionPage = notionResults.results[0];
+        console.log('Found Notion page:', notionPage.id);
+
+        // Update the Notion page
+        await updateNotionPage(notionPage.id, status, date);
+        
+        console.log('Notion updated successfully', {
+          pageId: notionPage.id,
+          username: user.username,
+          status,
+          date
+        });
+
+        return res.status(200).json({ 
+          ok: true, 
+          processed: true,
+          notionUpdated: true,
+          pageId: notionPage.id
+        });
+
+      } catch (notionError: any) {
+        console.error('Notion update failed:', notionError);
+        return res.status(200).json({ 
+          ok: true, 
+          processed: true,
+          notionError: notionError.message
+        });
+      }
     }
 
     // Fallback for other updates

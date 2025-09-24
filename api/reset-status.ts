@@ -10,7 +10,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     return res.status(401).json({ ok: false, error: 'Unauthorized' });
   }
 
-  const date = req.query.date as string | undefined; // allow manual date override
+  const date = req.query['date'] as string | undefined; // allow manual date override
   const currentDate = date || todayYYYMMDD();
 
   try {

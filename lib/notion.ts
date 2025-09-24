@@ -34,7 +34,7 @@ export async function upsertAttendanceRecord(params: {
     const checked = status === 'present';
     await withRetry(async () =>
       notion.pages.update({
-        page_id: config.NOTION_PAGE_ID as string,
+        page_id: config.NOTION_PAGE_ID!,
         properties: {
           [checkboxName]: { checkbox: checked },
         },

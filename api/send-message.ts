@@ -3,7 +3,7 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const auth = req.headers['authorization'] || '';
-    const adminToken = process.env.ADMIN_TOKEN;
+    const adminToken = process.env['ADMIN_TOKEN'];
     
     if (adminToken && auth !== `Bearer ${adminToken}`) {
       return res.status(401).json({ ok: false, error: 'Unauthorized' });

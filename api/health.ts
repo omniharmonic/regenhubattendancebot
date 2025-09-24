@@ -4,10 +4,10 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
   try {
     // Simple health check without external API calls
     const envCheck = {
-      NODE_ENV: process.env.NODE_ENV,
-      TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN ? 'SET' : 'NOT_SET',
-      NOTION_TOKEN: process.env.NOTION_TOKEN ? 'SET' : 'NOT_SET',
-      TIMEZONE: process.env.TIMEZONE,
+      NODE_ENV: process.env['NODE_ENV'],
+      TELEGRAM_BOT_TOKEN: process.env['TELEGRAM_BOT_TOKEN'] ? 'SET' : 'NOT_SET',
+      NOTION_TOKEN: process.env['NOTION_TOKEN'] ? 'SET' : 'NOT_SET',
+      TIMEZONE: process.env['TIMEZONE'],
     };
     
     const ok = envCheck.TELEGRAM_BOT_TOKEN === 'SET' && envCheck.NOTION_TOKEN === 'SET';

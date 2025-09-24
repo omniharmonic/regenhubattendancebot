@@ -8,7 +8,7 @@ const levelToInt: Record<LogLevel, number> = {
   error: 40,
 };
 
-const envLevel = (process.env.LOG_LEVEL as LogLevel) || 'info';
+const envLevel = (process.env['LOG_LEVEL'] as LogLevel) || 'info';
 
 function log(level: LogLevel, message: string, meta?: unknown) {
   if (levelToInt[level] < levelToInt[envLevel]) return;

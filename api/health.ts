@@ -8,17 +8,17 @@ export default async function handler(_req: VercelRequest, res: VercelResponse) 
   try {
     const url = `https://api.telegram.org/bot${config.TELEGRAM_BOT_TOKEN}/getMe`;
     const r = await fetch(url, { method: 'GET' });
-    components.telegram = { ok: r.ok };
+    components['telegram'] = { ok: r.ok };
   } catch (e: any) {
-    components.telegram = { ok: false, message: e?.message };
+    components['telegram'] = { ok: false, message: e?.message };
   }
 
   try {
     const notion = new NotionClient({ auth: config.NOTION_TOKEN });
     await notion.databases.retrieve({ database_id: config.NOTION_DATABASE_ID });
-    components.notion = { ok: true };
+    components['notion'] = { ok: true };
   } catch (e: any) {
-    components.notion = { ok: false, message: e?.message };
+    components['notion'] = { ok: false, message: e?.message };
   }
 
   const ok = Object.values(components).every((c) => c.ok);

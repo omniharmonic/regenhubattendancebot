@@ -1,0 +1,718 @@
+"TimeUTC","timestampInMs","requestPath","requestMethod","requestQueryString","responseStatusCode","requestId","requestUserAgent","level","environment","branch","vercelCache","type","function","host","deploymentDomain","deploymentId","durationMs","region","maxMemoryUsed","memorySize","message","projectId","traceId","sessionId","invocationId","instanceId","concurrency"
+"2025-09-24 02:54:53",1758682493536,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"fz9cj-1758682493470-9b03992ed18d","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-forwarded-for': '91.108.5.46',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'x-vercel-internal-ingress-port': '18446',
+    'content-type': 'application/json',
+    'x-vercel-function-path': 'api/webhook',
+    'accept-encoding': 'gzip, deflate',
+    'x-vercel-ip-country': 'NL',
+    'x-vercel-internal-bot-check': 'skip',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIGU0NWRkOTEzMmJlMjIxZTY3MGJlYzY4MzliZGM1Y2M2YjE1YTdiYmI0OTc2ZjEwYjA4NjM2MTgzM2IzZjdmODM=;exp=1758682793',
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-forwarded-proto': 'https',
+    'x-vercel-ip-country-region': 'NH',
+    'x-vercel-proxy-signature': 'Bearer e45dd9132be221e670bec6839bdc5cc6b15a7bbb4976f10b086361833b3f7f83',
+    'x-vercel-proxy-signature-ts': '1758682793',
+    'content-length': '365',
+    host: 'regenhubattendancebot.vercel.app',
+    'x-vercel-ip-postal-code': '1012',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    'x-vercel-ip-longitude': '4.8975',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-id': 'fra1::fz9cj-1758682493470-9b03992ed18d',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    'x-vercel-proxied-for': '91.108.5.46',
+    'x-vercel-ip-as-number': '62041',
+    'x-vercel-ip-continent': 'EU',
+    'x-vercel-ip-latitude': '52.3759',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364149,
+    message: {
+      message_id: 2,
+      from: [Object],
+      chat: [Object],
+      date: 1758682493,
+      text: '@regenhubattendancebot',
+      entities: [Array]
+    }
+  },
+  timestamp: '2025-09-24T02:54:53.535Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTACJHJXF70RBTT6Z31DN8","",-1
+"2025-09-24 02:54:53",1758682493521,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"fz9cj-1758682493470-9b03992ed18d","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",5,"iad1",81,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTACJHJXF70RBTT6Z31DN8","qRC7PwGsO99p",1
+"2025-09-24 02:54:49",1758682489559,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"q7qfk-1758682489357-64f8cf9daf92","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-vercel-proxy-signature': 'Bearer 83496270a0e3d03690121e49c3fe4a2ba5dd74f553c9ceea7e72d5603e428440',
+    'x-vercel-function-path': 'api/webhook',
+    'x-vercel-ip-continent': 'EU',
+    'accept-encoding': 'gzip, deflate',
+    'x-vercel-ip-longitude': '4.8975',
+    'x-vercel-ip-postal-code': '1012',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIDgzNDk2MjcwYTBlM2QwMzY5MDEyMWU0OWMzZmU0YTJiYTVkZDc0ZjU1M2M5Y2VlYTdlNzJkNTYwM2U0Mjg0NDA=;exp=1758682789',
+    'content-length': '465',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-vercel-proxied-for': '91.108.5.46',
+    host: 'regenhubattendancebot.vercel.app',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    'x-vercel-id': 'fra1::q7qfk-1758682489357-64f8cf9daf92',
+    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    'x-forwarded-for': '91.108.5.46',
+    'content-type': 'application/json',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-ip-country': 'NL',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-vercel-ip-latitude': '52.3759',
+    'x-vercel-proxy-signature-ts': '1758682789',
+    'x-vercel-ip-country-region': 'NH',
+    'x-forwarded-proto': 'https',
+    'x-vercel-ip-as-number': '62041',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364147,
+    message: {
+      message_id: 4,
+      from: [Object],
+      chat: [Object],
+      date: 1758682489,
+      migrate_to_chat_id: -1003180230115
+    }
+  },
+  timestamp: '2025-09-24T02:54:49.558Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8P9059QTY2FM09R8R4Y","",-1
+"2025-09-24 02:54:49",1758682489545,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"q7qfk-1758682489357-64f8cf9daf92","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",5,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8P9059QTY2FM09R8R4Y","qRC7PwGsO99p",1
+"2025-09-24 02:54:49",1758682489522,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"fz9cj-1758682489457-3b3bf1cca26b","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-vercel-proxied-for': '91.108.5.46',
+    'accept-encoding': 'gzip, deflate',
+    host: 'regenhubattendancebot.vercel.app',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIDgzNDk2MjcwYTBlM2QwMzY5MDEyMWU0OWMzZmU0YTJiYTVkZDc0ZjU1M2M5Y2VlYTdlNzJkNTYwM2U0Mjg0NDA=;exp=1758682789',
+    'x-vercel-ip-longitude': '4.8975',
+    'x-vercel-proxy-signature': 'Bearer 83496270a0e3d03690121e49c3fe4a2ba5dd74f553c9ceea7e72d5603e428440',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    'x-vercel-function-path': 'api/webhook',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-vercel-id': 'fra1::fz9cj-1758682489457-3b3bf1cca26b',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'x-vercel-ip-country-region': 'NH',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-ip-country': 'NL',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-forwarded-for': '91.108.5.46',
+    'x-vercel-ip-continent': 'EU',
+    'x-vercel-ip-postal-code': '1012',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    'content-type': 'application/json',
+    'x-forwarded-proto': 'https',
+    'x-vercel-ip-as-number': '62041',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    'content-length': '966',
+    'x-vercel-proxy-signature-ts': '1758682789',
+    'x-vercel-ip-latitude': '52.3759',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364148,
+    my_chat_member: {
+      chat: [Object],
+      from: [Object],
+      date: 1758682489,
+      old_chat_member: [Object],
+      new_chat_member: [Object]
+    }
+  },
+  timestamp: '2025-09-24T02:54:49.522Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8N3K7FTBQEZBJBGQ1P0","",-1
+"2025-09-24 02:54:49",1758682489507,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"fz9cj-1758682489457-3b3bf1cca26b","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",6,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8N3K7FTBQEZBJBGQ1P0","qRC7PwGsO99p",1
+"2025-09-24 02:54:49",1758682489381,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"fz9cj-1758682489315-74f1ca0aa1ab","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-vercel-proxy-signature-ts': '1758682789',
+    'content-type': 'application/json',
+    'content-length': '361',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    'x-vercel-ip-latitude': '52.3759',
+    'accept-encoding': 'gzip, deflate',
+    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-ip-as-number': '62041',
+    'x-vercel-ip-country': 'NL',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIDgzNDk2MjcwYTBlM2QwMzY5MDEyMWU0OWMzZmU0YTJiYTVkZDc0ZjU1M2M5Y2VlYTdlNzJkNTYwM2U0Mjg0NDA=;exp=1758682789',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    'x-vercel-ip-country-region': 'NH',
+    'x-vercel-ip-continent': 'EU',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-vercel-proxy-signature': 'Bearer 83496270a0e3d03690121e49c3fe4a2ba5dd74f553c9ceea7e72d5603e428440',
+    'x-vercel-function-path': 'api/webhook',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-vercel-ip-postal-code': '1012',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    'x-vercel-id': 'fra1::fz9cj-1758682489315-74f1ca0aa1ab',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-forwarded-for': '91.108.5.46',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    'x-vercel-proxied-for': '91.108.5.46',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'x-vercel-ip-longitude': '4.8975',
+    host: 'regenhubattendancebot.vercel.app',
+    'x-forwarded-proto': 'https',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364146,
+    message: {
+      message_id: 1,
+      from: [Object],
+      sender_chat: [Object],
+      chat: [Object],
+      date: 1758682488,
+      migrate_from_chat_id: -4836672774
+    }
+  },
+  timestamp: '2025-09-24T02:54:49.381Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8GMAWD1N2DN4YKATS0B","",-1
+"2025-09-24 02:54:49",1758682489364,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"fz9cj-1758682489315-74f1ca0aa1ab","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",6,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8GMAWD1N2DN4YKATS0B","qRC7PwGsO99p",1
+"2025-09-24 02:54:49",1758682489260,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"fz9cj-1758682489054-c3f8176e7ea5","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-forwarded-proto': 'https',
+    'x-vercel-ip-continent': 'EU',
+    'x-vercel-ip-country': 'NL',
+    'x-vercel-proxy-signature': 'Bearer 83496270a0e3d03690121e49c3fe4a2ba5dd74f553c9ceea7e72d5603e428440',
+    'x-vercel-id': 'fra1::fz9cj-1758682489054-c3f8176e7ea5',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIDgzNDk2MjcwYTBlM2QwMzY5MDEyMWU0OWMzZmU0YTJiYTVkZDc0ZjU1M2M5Y2VlYTdlNzJkNTYwM2U0Mjg0NDA=;exp=1758682789',
+    'x-vercel-function-path': 'api/webhook',
+    host: 'regenhubattendancebot.vercel.app',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-ip-country-region': 'NH',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-vercel-ip-postal-code': '1012',
+    'x-vercel-proxied-for': '91.108.5.46',
+    'content-type': 'application/json',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'accept-encoding': 'gzip, deflate',
+    'x-vercel-ip-latitude': '52.3759',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-vercel-ip-as-number': '62041',
+    'content-length': '572',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-forwarded-for': '91.108.5.46',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-proxy-signature-ts': '1758682789',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    'x-vercel-ip-longitude': '4.8975',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364145,
+    my_chat_member: {
+      chat: [Object],
+      from: [Object],
+      date: 1758682488,
+      old_chat_member: [Object],
+      new_chat_member: [Object]
+    }
+  },
+  timestamp: '2025-09-24T02:54:49.258Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8CFJ78JK14VZW4PZEHJ","",-1
+"2025-09-24 02:54:49",1758682489231,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"fz9cj-1758682489054-c3f8176e7ea5","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",14,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WTA8CFJ78JK14VZW4PZEHJ","qRC7PwGsO99p",1
+"2025-09-24 02:53:59",1758682439773,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"9j6j6-1758682439600-987a502b9e36","curl/8.7.1","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-vercel-ip-longitude': '-105.0263',
+    'content-type': 'application/json',
+    'content-length': '16',
+    'x-vercel-ip-latitude': '39.7628',
+    'x-forwarded-for': '71.218.242.222',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-vercel-proxy-signature': 'Bearer 8b675a0ffd2d22d5a7ce9b515f0438ee8109e71388e07755b1d4f6eb5d98ad58',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-vercel-ip-as-number': '209',
+    'x-forwarded-proto': 'https',
+    'x-vercel-forwarded-for': '71.218.242.222',
+    'x-vercel-proxy-signature-ts': '1758682739',
+    'x-vercel-ip-timezone': 'America/Denver',
+    'x-vercel-ip-continent': 'NA',
+    'x-real-ip': '71.218.242.222',
+    'x-vercel-ip-country': 'US',
+    'x-vercel-internal-ingress-port': '18444',
+    'user-agent': 'curl/8.7.1',
+    forwarded: 'for=71.218.242.222;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIDhiNjc1YTBmZmQyZDIyZDVhN2NlOWI1MTVmMDQzOGVlODEwOWU3MTM4OGUwNzc1NWIxZDRmNmViNWQ5OGFkNTg=;exp=1758682739',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMzgsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMzgsInZlcmNlbF9pZCI6InNmbzE6OmQ4Yjk0LTE3NTg2ODIwMzg1OTctYTc4ODRhODJiM2Q0IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjM4LCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.Jc4L1e8bmQQZtZ9Gjzj0cZNXnRX5V70cHi8zgJZ40ftsdNaJybzXzGO6gt3028wg0-W0yD1Lv4T9KHWPA046BvhoqsnlcXEm-Uo9TXFKjub_G5j7A4Qr7lDbyTC8GkiLWbzFWpD1WcKWscrEsdsCRSg27k13Tp3Dyur4d3uFnyoFugVJ5etBJjNMmG4BYwlTD25KQCUPWT_CoI-2UydhXK7Ytk2qcNC9FlvtNRmN_PZWcMnp36S2g3rRsYtDcTKf7c1h8V7aMfxGmGftAJmiyoJnaUO3V6BagWn3OSjVQ4zfUr9PiJMZWoIlFDTve3E4lvG3XOt97_H-MsLPvgFW_g',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    'accept-encoding': 'gzip',
+    'x-vercel-proxied-for': '71.218.242.222',
+    'x-vercel-ip-postal-code': '80211',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'x-vercel-ip-country-region': 'CO',
+    'x-vercel-ja4-digest': 't13d4907h2_0d8feac7bc37_7395dae3b2f3',
+    host: 'regenhubattendancebot.vercel.app',
+    'x-vercel-id': 'sfo1::9j6j6-1758682439600-987a502b9e36',
+    'x-vercel-function-path': 'api/webhook',
+    'x-vercel-ip-city': 'Denver',
+    accept: '*/*',
+    connection: 'close'
+  },
+  body: { test: 'data' },
+  timestamp: '2025-09-24T02:53:59.772Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT8R1WWCR3KMKCBYK6MJW0","",-1
+"2025-09-24 02:53:59",1758682439740,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"9j6j6-1758682439600-987a502b9e36","curl/8.7.1","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",20,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT8R1WWCR3KMKCBYK6MJW0","qRC7PwGsO99p",1
+"2025-09-24 02:53:47",1758682427322,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"k2jkp-1758682427260-a01038f364b2","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    host: 'regenhubattendancebot.vercel.app',
+    'content-type': 'application/json',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    'x-vercel-proxied-for': '91.108.5.46',
+    'x-vercel-ip-continent': 'EU',
+    'content-length': '748',
+    'x-vercel-ip-latitude': '52.3759',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    'x-vercel-function-path': 'api/webhook',
+    'x-vercel-ip-postal-code': '1012',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-ip-country': 'NL',
+    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-proxy-signature-ts': '1758682727',
+    'x-vercel-ip-as-number': '62041',
+    'accept-encoding': 'gzip, deflate',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIDlmZDk4YzJlZTRhYWM1NDI5MTU1NWI5ZWVjYzYxYTY4YmJmMmE0YTU0MzZmNTQ3NjEwZjRhY2VkN2EyY2Y4ODc=;exp=1758682727',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-vercel-ip-longitude': '4.8975',
+    'x-forwarded-proto': 'https',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-forwarded-for': '91.108.5.46',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    'x-vercel-proxy-signature': 'Bearer 9fd98c2ee4aac54291555b9eecc61a68bbf2a4a5436f547610f4aced7a2cf887',
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-vercel-id': 'fra1::k2jkp-1758682427260-a01038f364b2',
+    'x-vercel-ip-country-region': 'NH',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364144,
+    message: {
+      message_id: 3,
+      from: [Object],
+      chat: [Object],
+      date: 1758682015,
+      new_chat_participant: [Object],
+      new_chat_member: [Object],
+      new_chat_members: [Array]
+    }
+  },
+  timestamp: '2025-09-24T02:53:47.321Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT8BXE28J9PATEK2AGTTE7","",-1
+"2025-09-24 02:53:47",1758682427309,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"k2jkp-1758682427260-a01038f364b2","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",5,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT8BXE28J9PATEK2AGTTE7","qRC7PwGsO99p",1
+"2025-09-24 02:53:47",1758682427200,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"k2jkp-1758682426853-f17ca036bb33","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",-1,"iad1",-1,-1,"Webhook received: {
+  method: 'POST',
+  headers: {
+    'x-vercel-ip-country': 'NL',
+    'x-vercel-internal-bot-check': 'skip',
+    'x-forwarded-host': 'regenhubattendancebot.vercel.app',
+    forwarded: 'for=91.108.5.46;host=regenhubattendancebot.vercel.app;proto=https;sig=0QmVhcmVyIGZhNTk3NmZmNWY1NWUzMjhkMWRiNWYyNjk4MTQ1YjNlZDBiMjE4OWE2MzNhYTJjOWY5YTI3N2YxYWU1ZjFjOWI=;exp=1758682726',
+    'x-vercel-id': 'fra1::k2jkp-1758682426853-f17ca036bb33',
+    'x-vercel-proxied-for': '91.108.5.46',
+    'x-forwarded-proto': 'https',
+    'accept-encoding': 'gzip, deflate',
+    'x-vercel-ip-latitude': '52.3759',
+    'x-vercel-ip-timezone': 'Europe/Amsterdam',
+    'x-vercel-proxy-signature': 'Bearer fa5976ff5f55e328d1db5f2698145b3ed0b2189a633aa2c9f9a277f1ae5f1c9b',
+    'x-forwarded-for': '91.108.5.46',
+    'x-vercel-proxy-signature-ts': '1758682726',
+    'x-vercel-ip-city': 'Amsterdam',
+    'x-vercel-ip-as-number': '62041',
+    'x-vercel-ip-continent': 'EU',
+    'content-length': '454',
+    'x-vercel-ja4-digest': 't13d301100_1d37bd780c83_ef4b9b248d72',
+    host: 'regenhubattendancebot.vercel.app',
+    'x-vercel-internal-ingress-port': '18446',
+    'x-vercel-internal-ingress-bucket': 'bucket018',
+    'x-vercel-ip-country-region': 'NH',
+    'x-vercel-ip-longitude': '4.8975',
+    'x-vercel-ip-postal-code': '1012',
+    'x-vercel-function-path': 'api/webhook',
+    'x-real-ip': '91.108.5.46',
+    'x-vercel-oidc-token': 'eyJraWQiOiJtcmstNDMwMmVjMWI2NzBmNDhhOThhZDYxZGFkZTRhMjNiZTciLCJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE3NTg2ODIwMDMsIm93bmVyX2lkIjoidGVhbV9KcjBySU8yaU9XazAyeUtBVkk0VG5VWXQiLCJpYXQiOjE3NTg2ODIwMDMsInZlcmNlbF9pZCI6ImZyYTE6OjdoZDk0LTE3NTg2ODIwMDI5OTEtNThhNjk4NTE5YzA3IiwiYXVkIjoiaHR0cHM6XC9cL3ZlcmNlbC5jb21cL29tbmloYXJtb25pY3MtcHJvamVjdHMiLCJvd25lciI6Im9tbmloYXJtb25pY3MtcHJvamVjdHMiLCJpc3MiOiJodHRwczpcL1wvb2lkYy52ZXJjZWwuY29tXC9vbW5paGFybW9uaWNzLXByb2plY3RzIiwicHJvamVjdF9pZCI6InByal9JQmprMFZrTFZhcEJ3dFVSUWNPaEsxT3ZRT1pVIiwiZXhwIjoxNzU4Njg1NjAzLCJlbnZpcm9ubWVudCI6InByb2R1Y3Rpb24iLCJzY29wZSI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInN1YiI6Im93bmVyOm9tbmloYXJtb25pY3MtcHJvamVjdHM6cHJvamVjdDpyZWdlbmh1YmF0dGVuZGFuY2Vib3Q6ZW52aXJvbm1lbnQ6cHJvZHVjdGlvbiIsInByb2plY3QiOiJyZWdlbmh1YmF0dGVuZGFuY2Vib3QifQ.RMJO00PRvdpZEuh0TibiDLikUim5jMNec4utyyghMmzi0aJyk-9BZwzhfbcTOssb3vWbQ6lWSFfe1Bwt1qXlFB7jV-_K1FQx1LDuxJ6mjaagxJdijRu3gh7JClpb69-Oy9SWdm5kYlI-841hkZ2_jPlANJLbf2ycz47he4-GNsq8-iFQ2gHelJU-p2K2KDdYzKHdgjH9Q_pmKCtKGuWhuqx7Py87mbiRlXmRfZjGZGy6HBgv3hsETuSyY53Fj6yIlCAShVYypA0KUbfxA-H8x0h279CDWHWALVYDrBbE7gToz8J1j8UDbktE2s9dgwBHZ5I-oVBToEClT1L39CLX3Q',
+    'content-type': 'application/json',
+    'x-vercel-forwarded-for': '91.108.5.46',
+    'x-vercel-deployment-url': 'regenhubattendancebot-36al8cgav-omniharmonics-projects.vercel.app',
+    connection: 'close',
+    accept: '*/*'
+  },
+  body: {
+    update_id: 30364143,
+    message: {
+      message_id: 2,
+      from: [Object],
+      chat: [Object],
+      date: 1758682002,
+      group_chat_created: true
+    }
+  },
+  timestamp: '2025-09-24T02:53:47.196Z'
+}","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT8BRY168DS6HK0XZJH7K2","",-1
+"2025-09-24 02:53:47",1758682427166,"regenhubattendancebot.vercel.app/api/webhook","POST","",200,"k2jkp-1758682426853-f17ca036bb33","-","info","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_7Cjf8DbPC64BfsET2PoeuRgc4KqF",20,"iad1",80,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT8BRY168DS6HK0XZJH7K2","qRC7PwGsO99p",1
+"2025-09-24 02:53:09",1758682389716,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"lprxp-1758682389473-f1a242a5d79b","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT771ATF3KZV5Y6Z4VPHV5","",-1
+"2025-09-24 02:53:09",1758682389546,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"lprxp-1758682389473-f1a242a5d79b","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",140,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT771ATF3KZV5Y6Z4VPHV5","",1
+"2025-09-24 02:51:51",1758682311798,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"jxj6d-1758682311473-8c2e5a684d5e","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT4TZ72CF1NZVBP2J6Q8RT","",-1
+"2025-09-24 02:51:51",1758682311655,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"jxj6d-1758682311473-8c2e5a684d5e","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",129,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT4TZ72CF1NZVBP2J6Q8RT","",1
+"2025-09-24 02:51:32",1758682292415,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"7hd94-1758682292083-e51fec1f9914","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT481C2HWVWHEB2MXQJP9H","",-1
+"2025-09-24 02:51:32",1758682292268,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"7hd94-1758682292083-e51fec1f9914","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",129,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT481C2HWVWHEB2MXQJP9H","",1
+"2025-09-24 02:50:13",1758682213027,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"kpmr2-1758682212679-cf8ebc13a7b4","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT1TG6D18X1QATDKEHEJ2E","",-1
+"2025-09-24 02:50:12",1758682212869,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"kpmr2-1758682212679-cf8ebc13a7b4","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",131,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT1TG6D18X1QATDKEHEJ2E","",1
+"2025-09-24 02:49:59",1758682199416,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"zswpz-1758682198067-517ad2e13a58","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT1D710Q5NT0B6J1GB61KT","",-1
+"2025-09-24 02:49:59",1758682199265,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"zswpz-1758682198067-517ad2e13a58","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_F5RvzXNahkN3sdnkPQqjZeBz6czU",130,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WT1D710Q5NT0B6J1GB61KT","",1
+"2025-09-24 02:48:53",1758682133011,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"cxh68-1758682132675-acfd696e5450","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_AYgADYVU2mBcKnQew8exyuTsK14v",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSZCBRAP7X6242J2RHW3RM","",-1
+"2025-09-24 02:48:52",1758682132856,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"cxh68-1758682132675-acfd696e5450","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_AYgADYVU2mBcKnQew8exyuTsK14v",131,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSZCBRAP7X6242J2RHW3RM","",1
+"2025-09-24 02:48:52",1758682132620,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"lbvzc-1758682132145-126ddf9af042","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_AYgADYVU2mBcKnQew8exyuTsK14v",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSZBZMH9N6K4V7HCEASTVV","",-1
+"2025-09-24 02:48:52",1758682132468,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"lbvzc-1758682132145-126ddf9af042","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_AYgADYVU2mBcKnQew8exyuTsK14v",130,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSZBZMH9N6K4V7HCEASTVV","",1
+"2025-09-24 02:47:48",1758682068614,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"slqlt-1758682068413-458ffd4577ed","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSXDFQ24Q740SSVKFKKT3V","",-1
+"2025-09-24 02:47:48",1758682068471,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"slqlt-1758682068413-458ffd4577ed","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",128,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSXDFQ24Q740SSVKFKKT3V","",1
+"2025-09-24 02:47:48",1758682068090,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"qf5pl-1758682067889-ea88b0b7c2f9","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSXCZBZ8S91MA5G51XD4ZB","",-1
+"2025-09-24 02:47:47",1758682067947,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"qf5pl-1758682067889-ea88b0b7c2f9","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",128,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSXCZBZ8S91MA5G51XD4ZB","",1
+"2025-09-24 02:47:16",1758682036357,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"kpmr2-1758682036160-a4f5acf71d48","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSWDZMTJ8KC1VB8JQZ2BJP","",-1
+"2025-09-24 02:47:16",1758682036212,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"kpmr2-1758682036160-a4f5acf71d48","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",129,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSWDZMTJ8KC1VB8JQZ2BJP","",1
+"2025-09-24 02:47:15",1758682035831,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"sr2k6-1758682035630-a91149d9cacf","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSWDF403EAK3MAX96CK2XV","",-1
+"2025-09-24 02:47:15",1758682035684,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"sr2k6-1758682035630-a91149d9cacf","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",126,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSWDF403EAK3MAX96CK2XV","",1
+"2025-09-24 02:47:00",1758682020090,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"zswpz-1758682019878-0922b5d4840a","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVY30T2YM448T3QS1JA35","",-1
+"2025-09-24 02:46:59",1758682019935,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"zswpz-1758682019878-0922b5d4840a","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",135,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVY30T2YM448T3QS1JA35","",1
+"2025-09-24 02:46:59",1758682019573,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"g8flv-1758682019362-875be1c69f55","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVXJS8PKQ04EE431603QS","",-1
+"2025-09-24 02:46:59",1758682019417,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"g8flv-1758682019362-875be1c69f55","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",132,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVXJS8PKQ04EE431603QS","",1
+"2025-09-24 02:46:51",1758682011822,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"5jsnw-1758682011496-a9cb1fa4d0c5","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVP0X006FZNGM28TK11H6","",-1
+"2025-09-24 02:46:51",1758682011677,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"5jsnw-1758682011496-a9cb1fa4d0c5","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",129,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVP0X006FZNGM28TK11H6","",1
+"2025-09-24 02:46:51",1758682011307,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"l5dnt-1758682011109-5081ad63f5b6","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVNGSMMTNYZQY6J74ANQE","",-1
+"2025-09-24 02:46:51",1758682011161,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"l5dnt-1758682011109-5081ad63f5b6","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",128,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVNGSMMTNYZQY6J74ANQE","",1
+"2025-09-24 02:46:47",1758682007441,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"8jn5n-1758682007249-2b7383dd7400","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVHR30AP3BEMJTM9D0T7T","",-1
+"2025-09-24 02:46:47",1758682007299,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"8jn5n-1758682007249-2b7383dd7400","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",126,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVHR30AP3BEMJTM9D0T7T","",1
+"2025-09-24 02:46:47",1758682007053,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"8qmqf-1758682006853-7e8a68f372dd","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVHBR1DC05SQR2GMA0WP1","",-1
+"2025-09-24 02:46:46",1758682006904,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"8qmqf-1758682006853-7e8a68f372dd","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",132,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVHBR1DC05SQR2GMA0WP1","",1
+"2025-09-24 02:46:45",1758682005193,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"w4pzx-1758682004853-8280f85d691e","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVFHGHZ5NKEM4DYEM2N59","",-1
+"2025-09-24 02:46:45",1758682005040,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"w4pzx-1758682004853-8280f85d691e","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",126,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVFHGHZ5NKEM4DYEM2N59","",1
+"2025-09-24 02:46:44",1758682004797,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"nmhbw-1758682004480-ce60aad7f6ab","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVF5C0E8RERKZYSBTWAZM","",-1
+"2025-09-24 02:46:44",1758682004652,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"nmhbw-1758682004480-ce60aad7f6ab","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",128,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVF5C0E8RERKZYSBTWAZM","",1
+"2025-09-24 02:46:44",1758682004418,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"4ls6b-1758682004057-6b89c0fd7990","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVERX3F725ZQMA5YH6VPM","",-1
+"2025-09-24 02:46:44",1758682004253,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"4ls6b-1758682004057-6b89c0fd7990","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",143,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVERX3F725ZQMA5YH6VPM","",1
+"2025-09-24 02:46:44",1758682004000,"regenhubattendancebot.vercel.app/api/webhook","POST","",-1,"7hd94-1758682002991-58a698519c07","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",-1,"iad1",-1,-1,"Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.
+Error [ERR_MODULE_NOT_FOUND]: Cannot find module '/var/task/lib/logger' imported from /var/task/api/webhook.js
+    at finalizeResolution (node:internal/modules/esm/resolve:281:11)
+    at moduleResolve (node:internal/modules/esm/resolve:866:10)
+    at moduleResolveWithNodePath (node:internal/modules/esm/resolve:990:14)
+    at defaultResolve (node:internal/modules/esm/resolve:1033:79)
+    at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:780:12)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:704:25)
+    at ModuleLoader.resolve (node:internal/modules/esm/loader:687:38)
+    at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:305:38)
+    at ModuleJob._link (node:internal/modules/esm/module_job:137:49) {
+  code: 'ERR_MODULE_NOT_FOUND',
+  url: 'file:///var/task/lib/logger'
+}
+Node.js process exited with exit status: 1. The logs above can help with debugging the issue.","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVDZ97WX82E7H8J43YZKF","",-1
+"2025-09-24 02:46:43",1758682003433,"regenhubattendancebot.vercel.app/api/webhook","POST","",500,"7hd94-1758682002991-58a698519c07","-","error","production","main","","lambda","/api/webhook","regenhubattendancebot.vercel.app","regenhubattendancebot.vercel.app","dpl_6bVB76ANPrNRoBT8d2XaKxYk7Eko",137,"iad1",77,2048,"","prj_IBjk0VkLVapBwtURQcOhK1OvQOZU","","","01K5WSVDZ97WX82E7H8J43YZKF","",1

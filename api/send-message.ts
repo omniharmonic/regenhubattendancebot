@@ -27,7 +27,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 		// Send Telegram message
 		const botToken = process.env['TELEGRAM_BOT_TOKEN'];
 		const chatId = process.env['TELEGRAM_CHAT_ID'];
-		const text = 'Good morning! Who will be at Regen Hub today? React with ✅ (present) or ❌ (absent).';
+		const text = 'Good morning! Who will be at Regen Hub today? React with 👍 (present) or 👎 (absent).';
 		
 		console.log('Using chat ID:', chatId);
 		

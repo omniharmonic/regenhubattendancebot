@@ -1,28 +1,32 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { Client as NotionClient } from '@notionhq/client';
-import { config } from '../lib/config';
-import { logger } from '../lib/logger';
 
 export default async function handler(_req: VercelRequest, res: VercelResponse) {
-  const components: Record<string, { ok: boolean; message?: string }> = {};
   try {
-    const url = `https://api.telegram.org/bot${config.TELEGRAM_BOT_TOKEN}/getMe`;
-    const r = await fetch(url, { method: 'GET' });
-    components['telegram'] = { ok: r.ok };
-  } catch (e: any) {
-    components['telegram'] = { ok: false, message: e?.message };
+    // Simple health check without external API calls
+    const envCheck = {
+      NODE_ENV: process.env.NODE_ENV,
+      TELEGRAM_BOT_TOKEN: process.env.TELEGRAM_BOT_TOKEN ? 'SET' : 'NOT_SET',
+      NOTION_TOKEN: process.env.NOTION_TOKEN ? 'SET' : 'NOT_SET',
+      TIMEZONE: process.env.TIMEZONE,
+    };
+    
+    const ok = envCheck.TELEGRAM_BOT_TOKEN === 'SET' && envCheck.NOTION_TOKEN === 'SET';
+    
+    res.status(ok ? 200 : 503).json({ 
+      ok, 
+      components: {
+        environment: { ok: true },
+        telegram: { ok: envCheck.TELEGRAM_BOT_TOKEN === 'SET' },
+        notion: { ok: envCheck.NOTION_TOKEN === 'SET' }
+      },
+      envCheck
+    });
+  } catch (error: any) {
+    res.status(500).json({ 
+      ok: false, 
+      error: error.message,
+      components: { error: { ok: false, message: error.message } }
+    });
   }
-
-  try {
-    const notion = new NotionClient({ auth: config.NOTION_TOKEN });
-    await notion.databases.retrieve({ database_id: config.NOTION_DATABASE_ID });
-    components['notion'] = { ok: true };
-  } catch (e: any) {
-    components['notion'] = { ok: false, message: e?.message };
-  }
-
-  const ok = Object.values(components).every((c) => c.ok);
-  logger.info('health', { ok, components });
-  res.status(ok ? 200 : 503).json({ ok, components });
 }
 

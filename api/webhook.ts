@@ -1,5 +1,4 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { mapEmojiToStatus } from '../lib/emoji';
 
 type TelegramUpdate = {
   message_reaction?: {
@@ -8,6 +7,14 @@ type TelegramUpdate = {
     emoji: string[];
   };
 };
+
+// Simple emoji mapping function (inline to avoid import issues)
+function mapEmojiToStatus(emoji: string): string {
+  // Default thumbs up/down mapping
+  if (emoji === '👍' || emoji === '👍🏼' || emoji === '👍🏽' || emoji === '👍🏾' || emoji === '👍🏿') return 'present';
+  if (emoji === '👎' || emoji === '👎🏼' || emoji === '👎🏽' || emoji === '👎🏾' || emoji === '👎🏿') return 'absent';
+  return 'unknown';
+}
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {

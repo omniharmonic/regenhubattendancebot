@@ -29,6 +29,8 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 		const chatId = process.env['TELEGRAM_CHAT_ID'];
 		const text = 'Good morning! Who will be at Regen Hub today? React with ✅ (present) or ❌ (absent).';
 		
+		console.log('Using chat ID:', chatId);
+		
 		const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 		const response = await fetch(url, {
 			method: 'POST',

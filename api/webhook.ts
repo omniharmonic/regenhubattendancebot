@@ -32,7 +32,7 @@ async function queryNotionDatabase(databaseId: string, telegramUsername: string)
     },
     body: JSON.stringify({
       filter: {
-        property: 'Telegram Username',
+        property: 'Telegram Handle',
         rich_text: {
           equals: telegramUsername
         }
@@ -63,7 +63,7 @@ async function updateNotionPage(pageId: string, status: string, date: string) {
     },
     body: JSON.stringify({
       properties: {
-        [date]: {
+        'In Today?': {
           checkbox: status === 'present'
         }
       }
